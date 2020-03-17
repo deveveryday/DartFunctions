@@ -15,18 +15,19 @@ main(){
   //   stdout.write('${employee.name}: R\$${employee.cashSalary}\n');    
   // }
 
-  for(var listCount = 0; listCount < listEmployees.length; listCount++){
+  var employeesLength = listEmployees.length;
+  for(var listCount = 0; listCount < employeesLength; listCount++){
     var employee = listEmployees[listCount];
-
     employee.setCashSalary(calculateIR(employee.rawSalary));
     employee.setCashSalary(calculateINSS(employee.rawSalary));
 
-    stdout.write('${employee.name}: rawSalary R\$${employee.rawSalary} | cash R\$${employee.cashSalary} \n');
+    stdout.write('💰  ${employee.name}: rawSalary R\$${employee.rawSalary} | cash R\$${employee.cashSalary} \n');
   }
 }
 
 calculateIR(double salary){
-  salary = salary - (salary * 0.08);
+  salary = salary > 1000 ? salary - (salary * 0.08) : salary; 
+  //salary = salary - (salary * 0.08);
   return salary;
 }
 
