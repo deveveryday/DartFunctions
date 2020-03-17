@@ -3,12 +3,11 @@ import 'dart:io';
 import 'employee.dart';
 
 main(){
-  List<Employee> listEmployees = new List();
-
-  listEmployees.add(new Employee("Ana", 1, 8, 50));
-  listEmployees.add(new Employee("Joana", 1, 8, 20));
-  listEmployees.add(new Employee("Chris", 1, 1, 3000));
-
+  List<Employee> listEmployees = [
+    new Employee("Ana", 1, 8, 50),
+    new Employee("Joana", 1, 8, 20),
+    new Employee("Chris", 1, 1, 3000)
+  ];
   // for(var employee in listEmployees){
   //   employee.setCashSalary(calculateIR(employee.rawSalary));
   //   employee.setCashSalary(calculateINSS(employee.rawSalary));
