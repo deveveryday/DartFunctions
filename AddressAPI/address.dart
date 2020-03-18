@@ -26,7 +26,6 @@ class Address {
     print('The JSON of your address is:');
     await for (var contents in response.transform(Utf8Decoder())) {
       print(contents);
-      jsonReturned += contents;
     }
     ;
   }

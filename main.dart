@@ -1,4 +1,3 @@
-import 'salary.dart';
 
 main(){
 }
